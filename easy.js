@@ -10,8 +10,8 @@ var swim = exercise('swimming');
 console.log(swim()); // prints "Today's exercise: swimming"
 */
 
-var run = exercise('running');
-var swim = exercise('swimming');
+const run = exercise('running');
+const swim = exercise('swimming');
 
 function exercise(exercise) {
         return function exerciseLog() {
