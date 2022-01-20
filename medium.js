@@ -13,12 +13,13 @@ console.log(sharePizza(3));
   */
 
 var sharePizza = cutPizzaSlices(8);
-var numPeople;
+var numPeople = 2;
 
 function cutPizzaSlices(numSlice) {
-    return 8;
+  return 8;
 }
-function sharePizza(numPeople) {
-    console.log(`Each person gets ${numSlice / numPeople} slices of pizza`);
+
+function sharePizza(numSlice, numPeople) {
+  console.log(`Each person gets ${numSlice / numPeople} slices of pizza`);
 }
-console.log(sharePizza(2));
+console.log(sharePizza());
