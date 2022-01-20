@@ -14,8 +14,9 @@ var run = exercise('running');
 var swim = exercise('swimming');
 
 function exercise(exercise) {
-        return `Today's exercise: ${exercise}`
+        return function exerciseLog() {
+                return `Today's exercise: ${exercise}`
+        }
 }
-
-console.log(run);
-console.log(swim);
+console.log(run());
+console.log(swim());

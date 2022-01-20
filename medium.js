@@ -12,14 +12,14 @@ console.log(sharePizza(3));
   // prints "Each person gets 2.67 slices of pizza"
   */
 
-var sharePizza = cutPizzaSlices(8);
-var numPeople = 2;
+const sharePizza = cutPizzaSlices(8);
 
 function cutPizzaSlices(numSlice) {
-  return 8;
+  return function splitPizza(numPeople) {
+    const slicePer = (numSlice/numPeople).toFixed(2);
+      return (`Each person gets ${slicePer} slices of pizza`);
+  }
 }
 
-function sharePizza(numSlice, numPeople) {
-  console.log(`Each person gets ${numSlice / numPeople} slices of pizza`);
-}
-console.log(sharePizza());
+console.log(sharePizza(2));
+console.log(sharePizza(3));
