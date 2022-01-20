@@ -6,3 +6,21 @@ Creating private objects and private properties helps you control who has access
 You can use 'getName' or other get methods to access data that people might need. For example, people addressing a package or email may need a customer's name, but they definitely shouldn't have access to their ssn.
 */
 
+const customerInfo = (function() {
+    const pii = {
+        name: "John",
+        address: "1234 Boardwalk Dr",
+        ssn: 123456789
+    }
+    return {
+        getName: function() {
+        return pii.name;
+        },
+        getAddress: function() {
+            return pii.address;
+        }
+    }
+})();
+
+console.log(customerInfo.getName());
+console.log(customerInfo.getAddress());
