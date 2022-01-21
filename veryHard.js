@@ -23,3 +23,20 @@ function Person(name, job, age) { }
 function Programmer(name, job, age, languages) { }
 */
 
+function Person(name, job, age) {
+    this.name = name;
+    this.job = job;
+    this.age = age;
+    this.exercise = function() {
+        console.log('Swimming is better than running.');
+    };
+    this.fetchJob = function() {
+        console.log(`${this.name} is a ${this.job}`);
+    };
+}
+
+const person1 = new Person("John", "Programmer", 21);
+person1.exercise();
+person1.fetchJob();
+
+function Programmer()

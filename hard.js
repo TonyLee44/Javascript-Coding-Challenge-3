@@ -14,7 +14,7 @@ const customerInfo = (function() {
     }
     return {
         getName: function() {
-        return pii.name;
+            return pii.name;
         },
         getAddress: function() {
             return pii.address;
