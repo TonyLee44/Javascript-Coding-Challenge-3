@@ -39,4 +39,35 @@ const person1 = new Person("John", "Programmer", 21);
 person1.exercise();
 person1.fetchJob();
 
-function Programmer()
+class Programmer extends Person{
+    constructor (name, job, age, languages) {
+        super(name, job, age);
+        this.languages = languages;
+        this.isBusy = true;
+    }
+        completeTask = function() {
+            this.isBusy = false;
+        }
+        acceptNewTask = function() {
+            this.isBusy = true;
+        }
+        offerNewTask = function() {
+            if(this.isBusy) {
+                console.log(`${this.name} can't accept any new tasks right now.`);
+            } else {
+                console.log(`${this.name} would love to take on a new responsibility.`)
+            }
+        }
+        learnLanguage = function(newLang) {
+            this.languages.push(` ${newLang}`);
+        }
+        listLanguage = function() {
+            console.log(`${this.name} knows these languages: ${this.languages}`);
+        }
+}
+
+const programmer1 = new Programmer("Tony", "Engineer", 25, ["Java", " Javascript", " HTML"]);
+console.log(programmer1.languages);
+programmer1.listLanguage();
+programmer1.learnLanguage("CSS");
+programmer1.listLanguage();
