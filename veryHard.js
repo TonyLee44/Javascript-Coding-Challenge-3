@@ -68,6 +68,18 @@ class Programmer extends Person{
 
 const programmer1 = new Programmer("Tony", "Engineer", 25, ["Java", " Javascript", " HTML"]);
 console.log(programmer1.languages);
-programmer1.listLanguage();
+
+const programmer2 = new Programmer("Brad", "Junior Developer", 25, ["CSS", " Python", " HTML"]);
+console.log(programmer2.languages);
+
 programmer1.learnLanguage("CSS");
 programmer1.listLanguage();
+programmer1.acceptNewTask();
+programmer1.completeTask();
+programmer1.offerNewTask();
+
+programmer2.learnLanguage("Java");
+programmer2.listLanguage();
+programmer2.acceptNewTask();
+programmer2.completeTask();
+programmer2.offerNewTask();
